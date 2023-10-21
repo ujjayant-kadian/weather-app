@@ -2,7 +2,7 @@
 const express = require("express");
 const axios = require("axios");
 
-// Creating a new instance of Express Route
+// Creating a new instance of Express Router
 const router = express.Router();
 
 // Initialising api key for OpenWeatherAPI
