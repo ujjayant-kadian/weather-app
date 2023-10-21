@@ -66,4 +66,4 @@ The application should now be running locally at http://localhost:3000. Open it 
 - The application will display weather information, packing suggestions, and a summary of upcoming weather.
 
 
-## CREATED BY UJJAYANT KADIAN AS A PART OF ASSIGNMENT 1 (INTERNET APPLICATIONS)
+# CREATED BY UJJAYANT KADIAN AS A PART OF ASSIGNMENT 1 (INTERNET APPLICATIONS)
