@@ -27,4 +27,4 @@ These instructions will help you set up and run the Weather App on your local ma
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/weather-app.git
+   git clone https://github.com/ujjayant-kadian/weather-app.git
