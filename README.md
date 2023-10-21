@@ -7,8 +7,6 @@ The Weather App is a web application that provides weather information, packing 
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Styling](#styling)
-- [License](#license)
 
 ## Features
 
@@ -29,19 +27,40 @@ These instructions will help you set up and run the Weather App on your local ma
    ```bash
    git clone https://github.com/ujjayant-kadian/weather-app.git
 
+   ```
+
 2. **Navigate to the project directory**:
 
-    ```bash
-    cd weather-app
+   ```bash
+   cd weather-app
+
+   ```
 
 3. **Install the required dependencies** using npm package manager:
 
    ```bash
    npm install
 
+   ```
+
 4. **Create an account** on [OpenWeatherMap](https://openweathermap.org/) to obtain an API key.
 
 5. **Replace your api key** in [routes/forecast.js](https://github.com/ujjayant-kadian/weather-app/blob/main/routes/forecastRoutes.js):
 
-   ```const apiKey = {YOUR_API_KEY} ```
+   `const apiKey = {YOUR_API_KEY} `
+
+6. **Run the application**:
+
+   ```bash
+   npm start
+   ```
+
+The application should now be running locally at http://localhost:3000. Open it in the browser to play with the app.
+
+## Usage
+- Enter the name of a city in the "City" input field.
+- Optionally, provide a two-letter country code in the "Country Code" input field.
+- Click the "Get Weather" button to retrieve weather information for the specified location.
+- Click "Get Weather for Current Location" to fetch weather data based on your current location.
+- The application will display weather information, packing suggestions, and a summary of upcoming weather.
 
