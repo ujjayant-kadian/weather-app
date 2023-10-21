@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Tags for character set and viewport settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Connecting to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <!-- Linking to external stylesheet -->
     <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <!-- Defining favicon for the website -->
     <link rel="icon" href="/images/favicon-32x32.png" type="image/x-icon">
     <title>Weather App</title>
   </head>
   <body>
     <div id="app">
       <h1>Weather Information</h1>
+      <!-- Input Fields for city and country code -->
       <div class="input-field">
         <label for="cityInput">City:</label>
         <input
@@ -34,6 +39,7 @@
           placeholder="Optional: Enter country code"
         />
       </div>
+      <!-- Buttons for fetching weather data -->
       <div class="btns">
         <button v-on:click="getWeatherData" :disabled="isCityEmpty">
           Get Weather
@@ -43,10 +49,12 @@
         </button>
       </div>
       <button v-on:click="resetData" id="clear" v-if="weatherData.length === 0">Clear</button>
+      <!-- Display fetched data when weather data is available -->
       <p v-if="displayCity">
         Displaying Weather Information for
         <span class="imp">{{displayCity}}</span>
       </p>
+      <!-- Packing Suggestions and information -->
       <div v-if="weatherData.length > 0" id="packing-suggestions">
         <h2>Some Packing Suggestions:</h2>
         <p>
@@ -60,6 +68,7 @@
           {{ packingInfo.wearMask ? "PM 2.5 exceeds 10 for your trip 😬! Don't forget to carry your mask!" : "No need to carry your mask. It's going to be pleasant!" }}
         </p>
       </div>
+      <!-- Display table when weather data and summary data is available -->
       <div id="summary-table" v-if="weatherData.length > 0">
         <table v-if="summaryData.length > 0" class="table-style">
           <thead>
@@ -81,10 +90,12 @@
         </table>
         <button v-on:click="resetData" id="clear">Clear</button>
       </div>
+      <!-- Error Message Display -->
       <div v-if="errorMessage" class="error-message">
         <p>{{ errorMessage }}</p>
       </div>
     </div>
+    <!-- Including Javascript libraries (Vue, axios) and application script -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="/scripts/app.js"></script>

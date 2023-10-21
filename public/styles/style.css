@@ -1,121 +1,143 @@
-html{
-    margin: 0;
-    padding: 0;
-    background: #95d0be;
-  }
-  #app {
-    overflow: hidden;
-    align-items: center;
-    font-family: 'Inter', sans-serif;
-    color: #333;
-  }
-  h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
-    line-height: 1.3;
-    width: 100%;
-    padding: 2rem;
-    text-align: center;
-    color: white;
-  }
-  p {
-      font-size: 1rem;
-      text-align: center;
-      margin: 0.5rem 0;
-  }
-  button {
-      font-family: inherit;
-      padding: 0.8rem 1.2rem;
-      margin: 0.5rem;
-      background-color: rgba(62, 182, 161, 0.5);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-  }
-  button:not([disabled]):hover{
-      background-color: rgba(136, 155, 151, 0.4);
-  }
-  #clear {
-      display: block;
-      margin: 0.5rem auto;
-      width: 30%;
-  }
-  .btns {
-      display: flex;
-      justify-content: center;
-  }
-  .btns button {
-      width: 30%;
-  }
-  .input-field {
-      text-align: center;
-      margin: 0.75rem auto;
-  }
-  .input-field label {
-      display: block;
-      margin-bottom: 0.5rem;
-  }
-  .input-field input {
-      margin-top: 0.5rem;
-      padding: 0.5rem;
-      width: 50%;
-      border-radius: 3px;
-      border: 1px solid #95d0be;
-  }
-  .input-field input:focus {
-      background-color: #95d0be;
-      color: white;
-  }
-  .imp {
-      font-weight: bold;
-      display: block;
-      margin: 0.5rem 0;
-      font-size: 1.5rem;
-      color: white;
-  }
-  #packing-suggestions {
-      margin: 0.5rem 0 1rem 0;
-  }
-  #packing-suggestions h2{
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.2rem;
-      text-align: center;
-      margin: 0;
-  }
-  .table-style {
-      width: 95%;
-      border-collapse: collapse;
-      margin: 1.5rem auto;
-      background-color: white;
-      border-radius: 5px;
-  }
-  .table-style th {
-      background-color: #f2f2f2;
-      text-align: left;
-      padding: 0.8rem;
-      font-weight: bold;
-      border-bottom: 1px solid #ddd;
-  }
-  .table-style th:hover{
-      background-color: #ddd;
-  }
-  .table-style td {
-      padding: 0.8rem;
-      border-bottom: 1px solid #e3e3e3;
-  }
-  .table-style tr:hover{
-      background-color: #f5f5f5;
-  }
-  .error-message {
-    background-color: #ff9999;
-    color: #cc0000;
-    padding: 1rem;
-    border-radius: 5px;
-    margin: 1rem auto;
-    max-width: 95%;
-    font-weight: bold;
-  }
-  .error-message p {
-    margin: 0;
-  }
+/* Basic styling to the entire HTML page */
+html {
+  margin: 0;
+  padding: 0;
+  background: #95d0be;
+}
+/* Styling for the main-content */
+#app {
+  overflow: hidden; /* Hide scrollbars */
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+/* Styling for the main title */
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  line-height: 1.3;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+/* Styling for paragraphs */
+p {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+/* Styling for buttons */
+button {
+  font-family: inherit;
+  padding: 0.8rem 1.2rem;
+  margin: 0.5rem;
+  background-color: rgba(62, 182, 161, 0.5);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+/* Add hover effect to active buttons */
+button:not([disabled]):hover {
+  background-color: rgba(136, 155, 151, 0.4);
+}
+/* Styling for the 'Clear' button */
+#clear {
+  display: block;
+  margin: 0.5rem auto;
+  width: 30%;
+}
+/* Styling for the container of buttons */
+.btns {
+  display: flex;
+  justify-content: center;
+}
+/* Styling of buttons within the group */
+.btns button {
+  width: 30%;
+}
+/* Styling for input fields */
+.input-field {
+  text-align: center;
+  margin: 0.75rem auto;
+}
+/* Styling for labels within input fields */
+.input-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+/* Styling for input within input fields */
+.input-field input {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  width: 50%;
+  border-radius: 3px;
+  border: 1px solid #95d0be;
+}
+/* Styling when an input field is focused */
+.input-field input:focus {
+  background-color: #95d0be;
+  color: white;
+}
+/* Styling for span (imp class) elements */
+.imp {
+  font-weight: bold;
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  color: white;
+}
+/* Styling for packing suggestions container */
+#packing-suggestions {
+  margin: 0.5rem 0 1rem 0;
+}
+/* Styling for the title within packing suggestions container */
+#packing-suggestions h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+}
+/* Styling for data tables */
+.table-style {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 1.5rem auto;
+  background-color: white;
+  border-radius: 5px;
+}
+/* Styling for table headers */
+.table-style th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 0.8rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+/* Hover effect for table headers */
+.table-style th:hover {
+  background-color: #ddd;
+}
+/* Styling for table cells */
+.table-style td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #e3e3e3;
+}
+/* Hover effects for the rows */
+.table-style tr:hover {
+  background-color: #f5f5f5;
+}
+/* Styling for error messages */
+.error-message {
+  background-color: #ff9999;
+  color: #cc0000;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem auto;
+  max-width: 95%;
+  font-weight: bold;
+}
+/* Styling for error messages text */
+.error-message p {
+  margin: 0;
+}
