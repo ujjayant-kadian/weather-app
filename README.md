@@ -58,9 +58,12 @@ These instructions will help you set up and run the Weather App on your local ma
 The application should now be running locally at http://localhost:3000. Open it in the browser to play with the app.
 
 ## Usage
+
 - Enter the name of a city in the "City" input field.
 - Optionally, provide a two-letter country code in the "Country Code" input field.
 - Click the "Get Weather" button to retrieve weather information for the specified location.
 - Click "Get Weather for Current Location" to fetch weather data based on your current location.
 - The application will display weather information, packing suggestions, and a summary of upcoming weather.
 
+
+## CREATED BY UJJAYANT KADIAN AS A PART OF ASSIGNMENT 1 (INTERNET APPLICATIONS)
