@@ -24,7 +24,24 @@ The Weather App is a web application that provides weather information, packing 
 
 These instructions will help you set up and run the Weather App on your local machine.
 
-1. Clone this repository to your local machine:
+1. **Clone this repository** to your local machine:
 
    ```bash
    git clone https://github.com/ujjayant-kadian/weather-app.git
+
+2. **Navigate to the project directory**:
+
+    ```bash
+    cd weather-app
+
+3. **Install the required dependencies** using npm package manager:
+
+   ```bash
+   npm install
+
+4. **Create an account** on [OpenWeatherMap](https://openweathermap.org/) to obtain an API key.
+
+5. **Replace your api key** in [routes/forecast.js](https://github.com/ujjayant-kadian/weather-app/blob/main/routes/forecastRoutes.js):
+
+   ```const apiKey = {YOUR_API_KEY} ```
+

@@ -3,11 +3,12 @@ const axios = require("axios");
 
 const router = express.Router();
 
+const apiKey = "cda8a7cd5811f762cee88308d37da4c7";
+
 router.get("/weather/:city/:countryCode?", async (req, res) => {
   try {
     const city = req.params.city;
     const countryCode = req.params.countryCode || "";
-    const apiKey = "cda8a7cd5811f762cee88308d37da4c7";
 
     const forecastUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}${
       countryCode ? `,${countryCode}` : ""
@@ -23,7 +24,6 @@ router.get("/weather/:city/:countryCode?", async (req, res) => {
 router.get("/current-location", async (req, res) => {
   try {
     const { lat, lon } = req.query;
-    const apiKey = "cda8a7cd5811f762cee88308d37da4c7";
     const forecastUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
     const forecastResponse = await axios.get(forecastUrl);
@@ -37,7 +37,6 @@ router.get("/current-location", async (req, res) => {
 router.get("/air-pollution", async (req, res) => {
   try {
     const { lat, lon } = req.query;
-    const apiKey = "cda8a7cd5811f762cee88308d37da4c7";
     const airPollutionUrl = `http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
     const airPollutionResponse = await axios.get(airPollutionUrl);
     // console.log(JSON.stringify(airPollutionResponse.data));
