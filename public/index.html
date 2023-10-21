@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Weather Information</h1>
+      <div class="input-field">
+        <label for="cityInput">City:</label>
+        <input
+          type="text"
+          id="cityInput"
+          v-model="city"
+          placeholder="Enter city name"
+        />
+      </div>
+      <div class="input-field">
+        <label for="countryCodeInput">Country Code:</label>
+        <input
+          type="text"
+          id="countryCodeInput"
+          v-model="countryCode"
+          placeholder="Optional: Enter country code"
+        />
+      </div>
+      <div class="btns">
+        <button v-on:click="getWeatherData" :disabled="isCityEmpty">
+          Get Weather
+        </button>
+        <button v-on:click="getWeatherForCurrentLocation">
+          Get Weather for Current Location
+        </button>
+      </div>
+      <button v-on:click="resetData" id="clear" v-if="weatherData.length === 0">Clear</button>
+      <p v-if="displayCity">
+        Displaying Weather Information for
+        <span class="imp">{{displayCity}}</span>
+      </p>
+      <div v-if="weatherData.length > 0" id="packing-suggestions">
+        <h2>Some Packing Suggestions:</h2>
+        <p>
+          Please pack for
+          <span class="imp">{{ packingInfo.temperatureType }}</span>
+        </p>
+        <p>
+          {{ packingInfo.bringUmbrella ? "It's going to rain 🌧️! Don't forget to carry your umbrella." : "No need to carry your umbrella! It's not going to rain 😀." }}
+        </p>
+        <p>
+          {{ packingInfo.wearMask ? "PM 2.5 exceeds 10 for your trip 😬! Don't forget to carry your mask!" : "No need to carry your mask. It's going to be pleasant!" }}
+        </p>
+      </div>
+      <div id="summary-table" v-if="weatherData.length > 0">
+        <table v-if="summaryData.length > 0" class="table-style">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Average Temperature (°C)</th>
+              <th>Average Wind Speed (m/s)</th>
+              <th>Average Rainfall (mm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="day in summaryData" :key="day.date">
+              <td>{{ day.date }}</td>
+              <td>{{ day.averageTemperature.toFixed(2) }}</td>
+              <td>{{ day.averageWindSpeed.toFixed(2) }}</td>
+              <td>{{ day.averageRainfall.toFixed(2) }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button v-on:click="resetData" id="clear">Clear</button>
+      </div>
+      <div v-if="errorMessage" class="error-message">
+        <p>{{ errorMessage }}</p>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
